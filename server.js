@@ -48,6 +48,11 @@ app.get('/bad', (req, res) => {
     errorMessage: 'Oh Nos there is an error!!'
   });
 });
+app.get('/projects',(req, res) => {
+  res.render('projects.hbs', {
+    pageTitle: 'My Projects'
+  });
+});
 app.listen(port, () => {
   console.log(`Server is up on port ${port}.`);
 });
